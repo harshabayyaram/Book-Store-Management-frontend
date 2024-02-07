@@ -11,7 +11,7 @@ function Book() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/books")
+      .get("https://book-store-management-o6vv.onrender.com/books")
       // .then((res) => console.log(res.data))
       .then((res) => setBook(res.data))
       .catch((err) => console.log(err));
@@ -19,14 +19,14 @@ function Book() {
 
   const list = () => {
     axios
-      .get("http://localhost:8080/books")
+      .get("https://book-store-management-o6vv.onrender.com/books")
       // .then((res) => console.log(res.data))
       .then((res) => setBook(res.data))
       .catch((err) => console.log(err));
   }
 
   const handleDelete = async (id) => {
-    await axios.delete("http://localhost:8080/books/" + id);
+    await axios.delete("https://book-store-management-o6vv.onrender.com/books/" + id);
     list();
   };
 

@@ -15,7 +15,7 @@ function UpdateBook() {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .put("http://localhost:8080/books/" + id, {
+      .put("https://book-store-management-o6vv.onrender.com/books/" + id, {
         title,
         author,
         genre,
